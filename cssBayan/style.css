@@ -1,141 +1,140 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: #f6f6eb;
+  font-family: sans-serif;
+  background-color: #f6f6eb;
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 auto;
-    color: #0056e1;
+  width: 90%;
+  margin: 0 auto;
+  color: #0056e1;
 }
 
 .wrapper:hover {
-    color: #000;
+  color: #000;
 }
 
-.title-text{
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 5rem;
-    color: #000;   
+.title-text {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 5rem;
+  color: #000;
 }
 
 .item {
-    margin: 0 auto;
-    width: 100%;
-    border-top: solid 1px #d1d9e3;
-    position: relative;
-    cursor: pointer;
+  margin: 0 auto;
+  width: 100%;
+  border-top: solid 0.0625rem #d1d9e3;
+  cursor: pointer;
 }
 
-.inner{
-    display: flex;
+.inner {
+  display: flex;
 }
 
-.state{
-    font-size: 2rem;
+.state {
+  font-size: 2rem;
 }
 
-.item__text{
-    font-size: 2rem;
+.item__text {
+  font-size: 2rem;
 }
 
-h2{
-    font-size: 1.5rem;
-    display: inline-block;
+h2 {
+  font-size: 1.5rem;
+  display: inline-block;
 }
 
-h2:hover{
-    color: #0056e1;
+h2:hover {
+  color: #0056e1;
 }
 
-input, 
-.item__content{
-    max-height: 0;
-    display: none;
-    transition: all 1s linear;
+input,
+.item__content {
+  display: flex;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 1s linear;
 }
 
-.item :checked ~ .item__content{
-    max-height: 100%;
-    display: block;
-    transition: all 1s linear;
+.item :checked ~ .item__content {
+  max-height: 100%;
+  display: block;
+  transition: all 1s linear;
 }
 
-label:hover > .item__content{
-    transition: height 1s linear;
-    transition-delay: 1s;
-    /* height: 100vh; */
-    display: block;
+label:hover > .item__content {
+  max-height: 100vh;
 }
 
-.item__text{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition-duration: 0.2s;
+.item__text {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
 
-label :checked ~ .item__text h2{
-    color: orangered;
+label :checked ~ .item__text h2 {
+  color: orangered;
 }
 
 .item__content {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
-.trigger{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-image: url("./plus-solid.svg");
-    background-repeat: no-repeat;
-    transition: all 300ms linear;
+.trigger {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("./plus-solid.svg");
+  background-repeat: no-repeat;
+  transition: all 300ms linear;
 }
 
 .item :checked ~ .item__text .trigger {
-    background-image: url("./minus-solid.svg");
-    background-repeat: no-repeat;
-    transition: all 300ms linear;
+  background-image: url("./minus-solid.svg");
+  background-repeat: no-repeat;
+  transition: all 300ms linear;
 }
 
-@media screen and (min-width: 1920px){
-    .wrapper {
-        width: 804px;
-        margin: 0 auto;
-}
-    h2{
-        font-size: 2.5em;
-}
+@media screen and (min-width: 120rem) {
+  .wrapper {
+    width: 804px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
 }
 
-@media screen and (min-width: 820px) and (max-width: 1920px){
-    .wrapper {
-        width: 804px;
-        margin: 0 auto;
-}
-    h2{
-        font-size: 2em;
-}
+@media screen and (min-width: 51.25rem) and (max-width: 120rem) {
+  .wrapper {
+    width: 804px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
 }
 
-@media screen and (max-width: 320px){
-    .wrapper {
-        width: 80%;
-}
-    h2{
-        font-size: 1em;
-}
+@media screen and (max-width: 20rem) {
+  .wrapper {
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
 }
